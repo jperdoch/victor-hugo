@@ -1,1 +1,1 @@
-{{ .Content | jsonify }}
+[["stepid","integrationid","name","text_before","text_after","text_code","orderid"],["1",{{ .Params.id | jsonify }},{{ .Title | jsonify }}, {{ .Content | jsonify }}, "", "", 0]]
