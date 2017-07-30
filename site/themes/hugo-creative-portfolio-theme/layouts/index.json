@@ -1,0 +1,12 @@
+[["integrationid","name","description","description_footer","image_url","is_active","type","orderid","threadid","applicationid"]{{ range $index, $element := first 10 .Data.Pages }},[
+  {{ $element.Params.id | jsonify }},
+  {{ $element.Title | jsonify }},
+  "",
+  "",
+  "image_url",
+  "Y",
+  "G",
+  {{$index}},
+  "",
+  "pap"
+]{{ end }}]

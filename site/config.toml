@@ -1,7 +1,12 @@
 baseurl = "/"
 languageCode = "en-us"
 title = "My New Hugo Site"
+theme = "hugo-creative-portfolio-theme"
+
+[outputs]
+  home = ["HTML", "JSON"]
+  page = ["HTML", "JSON"]
 
 [mediaTypes]
-  [mediaTypes."application/json+json"]
+  [mediaTypes."application/json"]
   suffix = "json"
