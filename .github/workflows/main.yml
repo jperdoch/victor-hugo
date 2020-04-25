@@ -7,28 +7,28 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: invalid-issues
-      uses: docker://takanabe/github-actions-automate-projects:v0.0.1
+      uses: docker://jperdoch/github-actions-automate-projects:v0.0.1
       if: github.event_name == 'issues' && github.event.action == 'labeled' && contains(github.event.issue.labels.*.name, 'status:INVALID')
       env:
         GITHUB_TOKEN: 25c49cda5e95d63f35e0675172b74ef58428bd70
         GITHUB_PROJECT_URL: https://github.com/jperdoch/victor-hugo/projects/2
         GITHUB_PROJECT_COLUMN_NAME: Invalid
     - name: add-new-issues-to-repository-based-project-column
-      uses: docker://takanabe/github-actions-automate-projects:v0.0.1
+      uses: docker://jperdoch/github-actions-automate-projects:v0.0.1
       if: github.event_name == 'issues' && github.event.action == 'labeled' && contains(github.event.issue.labels.*.name, 'status:CONFIRMED')
       env:
         GITHUB_TOKEN: 25c49cda5e95d63f35e0675172b74ef58428bd70
         GITHUB_PROJECT_URL: https://github.com/jperdoch/victor-hugo/projects/2
         GITHUB_PROJECT_COLUMN_NAME: Confirmed
     - name: in-progress
-      uses: docker://takanabe/github-actions-automate-projects:v0.0.1
+      uses: docker://jperdoch/github-actions-automate-projects:v0.0.1
       if: github.event_name == 'issues' && github.event.action == 'labeled' && contains(github.event.issue.labels.*.name, 'status:IN-PROGRESS')
       env:
         GITHUB_TOKEN: 25c49cda5e95d63f35e0675172b74ef58428bd70
         GITHUB_PROJECT_URL: https://github.com/jperdoch/victor-hugo/projects/2
         GITHUB_PROJECT_COLUMN_NAME: In progress
     - name: done
-      uses: docker://takanabe/github-actions-automate-projects:v0.0.1
+      uses: docker://jperdoch/github-actions-automate-projects:v0.0.1
       if: github.event_name == 'issues' && github.event.action == 'labeled' && !contains(github.event.issue.labels.*.name, 'release:WAITING')
       env:
         GITHUB_TOKEN: 25c49cda5e95d63f35e0675172b74ef58428bd70
