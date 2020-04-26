@@ -1,4 +1,4 @@
 QUnifier:
   labelsGroups:
-  - ["state:INVALID","state:CONFIRMED","state:PENDING","state:DONE","state:IN-PROGRESS"],
+  - ["state:INVALID","state:CONFIRMED","state:PENDING","state:DONE","state:IN-PROGRESS"]
   - ["release:WAITING","release:DONE"]
