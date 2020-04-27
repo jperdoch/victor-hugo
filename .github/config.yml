@@ -2,7 +2,7 @@ QUnifier:
   labelsGroups:
     - - state:INVALID
       - state:CONFIRMED
-      - state:PENDING
+      - state:POSTPONED
       - state:DONE
       - state:IN-PROGRESS
     - - release:WAITING
