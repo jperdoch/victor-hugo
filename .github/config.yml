@@ -7,3 +7,19 @@ QUnifier:
       - state:IN-PROGRESS
     - - release:WAITING
       - release:DONE
+    - - tech-design:PROPOSED
+      - tech-design:OK
+  moveLabeledIssue:
+    - projectId: 4388791
+      columnId: 8905715
+      whenLabel: state:INVALID
+    - projectId: 4388791
+      columnId: 8905699
+      whenLabel: state:IN-PROGRESS
+  labelMovedIssue:
+    - projectId: 4388791
+      columnId: 8905715
+      addLabel: state:INVALID
+    - projectId: 4388791
+      columnId: 8905699
+      addLabel: state:IN-PROGRESS
